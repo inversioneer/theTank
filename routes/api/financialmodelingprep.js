@@ -1,6 +1,5 @@
 const express = require('express');
 const request = require('request');
-const config = require('config');
 const router = express.Router();
 const {format, subDays} = require('date-fns');
 
@@ -10,7 +9,7 @@ const {format, subDays} = require('date-fns');
 router.get('/income/:ticker/:period', async (req,res ) => {
   try {
     const options = {
-      uri: `https://financialmodelingprep.com/api/v3/income-statement/${req.params.ticker}?period=${req.params.period}&apikey=${config.get('apiKey')}`,
+      uri: `https://financialmodelingprep.com/api/v3/income-statement/${req.params.ticker}?period=${req.params.period}&apikey=${process.env.apiKey}`,
       method: 'GET',
       headers: {'user-agent': 'node.js'}
     };
@@ -35,7 +34,7 @@ router.get('/income/:ticker/:period', async (req,res ) => {
 router.get('/cashflow/:ticker/:period', async (req,res ) => {
   try {
     const options = {
-      uri: `https://financialmodelingprep.com/api/v3/cash-flow-statement/${req.params.ticker}?period=${req.params.period}&apikey=${config.get('apiKey')}`,
+      uri: `https://financialmodelingprep.com/api/v3/cash-flow-statement/${req.params.ticker}?period=${req.params.period}&apikey=${process.env.apiKey}`,
       method: 'GET',
       headers: {'user-agent': 'node.js'}
     };
@@ -60,7 +59,7 @@ router.get('/cashflow/:ticker/:period', async (req,res ) => {
 router.get('/balance/:ticker/:period', async (req,res ) => {
   try {
     const options = {
-      uri: `https://financialmodelingprep.com/api/v3/balance-sheet-statement/${req.params.ticker}?period=${req.params.period}&apikey=${config.get('apiKey')}`,
+      uri: `https://financialmodelingprep.com/api/v3/balance-sheet-statement/${req.params.ticker}?period=${req.params.period}&apikey=${process.env.apiKey}`,
       method: 'GET',
       headers: {'user-agent': 'node.js'}
     };
@@ -85,7 +84,7 @@ router.get('/balance/:ticker/:period', async (req,res ) => {
 router.get('/prices/:ticker', async (req,res ) => {
   try {
     const options = {
-      uri: `https://financialmodelingprep.com/api/v3/historical-price-full/${req.params.ticker}?timeseries=15000&apikey=${config.get('apiKey')}`,
+      uri: `https://financialmodelingprep.com/api/v3/historical-price-full/${req.params.ticker}?timeseries=15000&apikey=${process.env.apiKey}`,
       method: 'GET',
       headers: {'user-agent': 'node.js'}
     };
@@ -116,7 +115,7 @@ router.get('/earningsCalendar', async (req,res ) => {
       var end = format(today, 'yyyy-MM-dd').toString();
         
     const options = {
-      uri: `https://financialmodelingprep.com/api/v4/earning-calendar-confirmed?from=${start}&to=${end}&apikey=${config.get('apiKey')}`,
+      uri: `https://financialmodelingprep.com/api/v4/earning-calendar-confirmed?from=${start}&to=${end}&apikey=${process.env.apiKey}`,
       method: 'GET',
       headers: {'user-agent': 'node.js'}
     };
@@ -143,7 +142,7 @@ router.get('/tradeableSymbols', async (req,res ) => {
   try {
         
     const options = {
-      uri: `https://financialmodelingprep.com/api/v3/available-traded/list?apikey=${config.get('apiKey')}`,
+      uri: `https://financialmodelingprep.com/api/v3/available-traded/list?apikey=${process.env.apiKey}`,
       method: 'GET',
       headers: {'user-agent': 'node.js'}
     };

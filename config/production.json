@@ -1,7 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://Dave1212:Dave1212@thetank.cswlz.mongodb.net/?retryWrites=true&w=majority",
-    "jwtSecret": "mysecrettoken",
     "githubClientId": "cb1dcddfec4925c1ce3c",
-    "githubSecret":"f2f3783dbf19c4484ecb0fadae7700432bf5127e",
-    "apiKey": "d54c6a064dc58b5e943e47f5fdecdf06"
+    "githubSecret":"f2f3783dbf19c4484ecb0fadae7700432bf5127e"
 }
