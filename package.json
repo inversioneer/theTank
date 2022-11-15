@@ -1,8 +1,8 @@
 {
-  "name": "devconnector",
+  "name": "thetank",
   "version": "1.0.0",
   "private": "true",
-  "description": "Social network for developers",
+  "description": "Stock research website",
   "main": "server.js",
   "scripts": {
     "start": "node server",
