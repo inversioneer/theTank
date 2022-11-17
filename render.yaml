@@ -8,10 +8,3 @@ services:
     dockerfilePath: Dockerfile.render
     plan: free # optional; defaults to starter
     numInstances: 1
-    envVars:
-      - key: apiKey # Imported from Heroku app
-        value: d54c6a064dc58b5e943e47f5fdecdf06
-      - key: jwtSecret # Imported from Heroku app
-        value: mysecrettoken
-      - key: mongoURI # Imported from Heroku app
-        value: mongodb+srv://Dave1212:Dave1212@thetank.cswlz.mongodb.net/?retryWrites=true&w=majority
