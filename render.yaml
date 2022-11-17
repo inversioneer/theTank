@@ -14,4 +14,4 @@ services:
       - key: jwtSecret # Imported from Heroku app
         value: mysecrettoken
       - key: mongoURI # Imported from Heroku app
-        value: mongodb+srv://Dave1212:Dave1212@thetank.cswlz.mongodb.net/?retryWrites&#x3D;true&amp;w&#x3D;majority
+        value: mongodb+srv://Dave1212:Dave1212@thetank.cswlz.mongodb.net/?retryWrites=true&w=majority
