@@ -1,1 +1,1 @@
-web: fathomless-lowlands-02850
+web: npm start
