@@ -1,7 +1,3 @@
 node_modules/
 config/default.json 
 .env
-.render-buildpacks.json
-render.yaml
-Dockerfile.render
-Procfile
