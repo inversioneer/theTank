@@ -16,9 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.20.2",
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@mui/material": "^5.8.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.15",
     "axios": "^1.2.0",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.8",
