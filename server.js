@@ -24,7 +24,6 @@ app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/calendar', require('./routes/api/calendar'));
 app.use('/api/profile', require('./routes/api/profile'));
-app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api/financialmodelingprep', require('./routes/api/financialmodelingprep'));
 
 // Schedule tasks to be run on the server.
