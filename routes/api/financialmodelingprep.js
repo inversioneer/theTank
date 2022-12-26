@@ -6,8 +6,9 @@ const {format, subDays} = require('date-fns');
 // @route    Get api/financialmodelingprep/income/:ticker/:period
 // @desc     GET income statement from financialmodelingprep
 // @access   Public
-router.get('/income/:ticker/:period', async (req,res ) => {
+router.get('/income/:ticker/:period', async (req, res) => {
   try {
+        
     const options = {
       uri: `https://financialmodelingprep.com/api/v3/income-statement/${req.params.ticker}?period=${req.params.period}&apikey=${process.env.apiKey}`,
       method: 'GET',

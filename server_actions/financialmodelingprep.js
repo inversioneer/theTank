@@ -1,5 +1,4 @@
 const axios =  require('axios');
-//const nodemailer = require('nodemailer');
 const Calendar = require('../models/Calendar');
 const UpdateLog = require('../models/UpdateLog');
 
